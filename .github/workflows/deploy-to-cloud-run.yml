@@ -25,7 +25,7 @@ jobs:
         with:
           version: '290.0.1'
           service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-          project_id: $PROJECT_ID
+          project_id: seamingly-creative-memory-book
 
       # Build and push image to Google Container Registry
       - name: Build
