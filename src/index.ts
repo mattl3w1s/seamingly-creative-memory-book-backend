@@ -1,11 +1,14 @@
 import express from 'express';
 const app = express();
+import cors from 'cors';
 import bodyParser from 'body-parser';
 
 async function bootstrap() {
   app.use(bodyParser.json());
+  app.use(cors());
 
-  app.get('/', async (req, res) => {
+  app.post('/api', async (req, res) => {
+    console.log(req.body);
     res.status(200).send('Hello, world!');
   });
 
